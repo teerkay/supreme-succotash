@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 22px;
+  font-family: "Unica One", cursive;
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+#app h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.6rem;
+  margin-bottom: 18px;
+}
+
+.calculator {
+  display: grid;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 480px;
+  height: 600px;
+  grid-template-rows: 180px 1fr;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border: #919191 solid 0.5px;
+}
+
+.display {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 10px;
+  text-align: right;
+  height: 160px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 40px 50px 60px;
+}
+
+.held-label {
+  grid-row: 1;
+  grid-column: 1 / 6;
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.held-value {
+  grid-row: 2;
+  grid-column: 1 / 6;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.25em;
+}
+
+.next-value {
+  font-size: 14px;
+  color: #666;
+  grid-row: 3;
+  grid-column: 2 / 6;
+  text-align: right;
+  font-size: 1.25em;
+}
+
+.next-operation {
+  grid-row: 3;
+  grid-column: 1;
+  font-size: 14px;
+  color: #666;
+}
+
+.controls {
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.memory {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-gap: 5px;
+}
+
+.operations {
+  grid-column: 4 / 5;
+  grid-row: 1 / 6;
+
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.digits {
+  grid-column: 1 / 4;
+  grid-row: 2 / 6;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+button {
+  font-size: 1em;
+  padding: 10px;
+  background-color: #ebeef2;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+button:active {
+  background-color: #ccc;
+}
+
+.decimal {
+  grid-column: span 2;
+}
